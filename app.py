@@ -12,8 +12,6 @@ st.title("Fake news Prediction System")
 title = st.text_input("title")
 text=st.text_input("text")
 
-
-
 # Prediction
 if st.button("Predict"):
 
