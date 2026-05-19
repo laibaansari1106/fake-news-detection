@@ -1,10 +1,15 @@
 import pickle
 import streamlit as st
 import numpy as np
+import os
 
 # Load model
-model = pickle.load(open('news_predictor_model.sav', 'rb'))
-vectorizer = pickle.load(open('vectorizer.sav', 'rb'))
+
+model_path = os.path.join(os.path.dirname(__file__), 'news_predictor_model.sav')
+vectorizer_path = os.path.join(os.path.dirname(__file__), 'vectorizer.sav')
+
+model = pickle.load(open(model_path, 'rb'))
+vectorizer = pickle.load(open(vectorizer_path, 'rb'))
 st.title("Fake news Prediction System")
 
 # Inputs
